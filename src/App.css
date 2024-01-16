@@ -9,9 +9,10 @@ body {
 
 main {
   max-width: 750px;
-  height: 750px;
+  height: 650px;
   margin: 3em auto;
   border-radius: 9px;
+  text-align: center;
   
   display: flex;
   flex-direction: column;
@@ -20,7 +21,19 @@ main {
   background-color: #E5E5E5;
 }
 
+.title {
+  font-size: 4.5rem;
+  margin: 2.5rem 0 0 0;
+}
+
+.instructions {
+  margin: 0;
+  padding: 0 50px;
+  font-size: 1.5rem;
+}
+
 #dice-container {
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(5, auto);
   gap: 30px;
@@ -30,17 +43,13 @@ main {
 .dice {
   width: 75px;
   height: 75px;
-  
   border-radius: 9px;
   box-shadow: 2px 2px 7px #4A4E74;
-
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-
-
 
 .dice-num {
   color: #0B2434;
@@ -50,6 +59,7 @@ main {
 .roll-dice {
   width: 200px; 
   height: 60px;
+  margin: 0 0 4rem 0;
   border-radius: 9px;
   background-color: #5035FF;
   box-shadow: 2px 2px 7px #4A4E74;
