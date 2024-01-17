@@ -24,10 +24,10 @@ export default function App() {
     if(idCheck(dice, "value") && idCheck(dice, "isHeld")){
       setTenzies(true)
     }
-    console.log("rerun")
+    
   }, [dice])
 
-
+  //newGame() resets both state conditions to their original conditions.
   function newGame() {
     setDice(allNewDice)
     setTenzies(false)
@@ -94,6 +94,7 @@ export default function App() {
 
   return (
     <main>
+      {tenzies === true && <Confetti/>}
       <h1 className="title">Tenzies</h1>
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       <div id="dice-container">{diceValues}</div>
@@ -107,9 +108,6 @@ export default function App() {
           </button>
         )
       }
-      {/* <button className="roll-dice" onClick={rollDice}>
-        {tenzies === true ? <>New Game</> : <>Roll</>}
-      </button> */}
     </main>
   );
 }
