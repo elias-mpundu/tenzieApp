@@ -96,7 +96,10 @@ export default function App() {
     <main>
       {tenzies === true && <Confetti/>}
       <h1 className="title">Tenzies</h1>
-      <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+      {tenzies ? 
+        <p className="instructions">Congratulations, You have won the Game!</p> : 
+        <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+      }
       <div id="dice-container">{diceValues}</div>
       {tenzies === false ? (
           <button className="roll-dice" onClick={rollDice}>
